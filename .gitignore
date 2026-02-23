@@ -1,0 +1,81 @@
+## Build artifacts
+bin/
+obj/
+out/
+Debug/
+Release/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+*.code-workspace
+
+## Rider
+.idea/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+## Logs
+*.log
+
+## Test results
+TestResult*/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Generated files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db
+*.mdb
+
+## Publish output
+publish/
+
+## Temporary files
+*.tmp
+*.temp
+*.bak
+
+## OS-specific
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## Rider
+.idea/
+
+## Dotnet tools
+.dotnet/
+
+## User secrets
+**/secrets.json
+
+## ASP.NET
+wwwroot/lib/
