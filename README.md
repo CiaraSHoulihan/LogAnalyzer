@@ -17,3 +17,8 @@ A log file with test data is included with this assignment.
 - Log file is always readable
 - Log file contains only valid HTTP requests which have an IP address, URL, and status code.
 - Active IP addresses could either mean the most requests per IP address, or most successful requests. Both were included.
+
+# How To
+
+- Run the application
+- Enter the full path of the log file to parse said file
