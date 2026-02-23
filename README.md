@@ -16,7 +16,9 @@ A log file with test data is included with this assignment.
 
 - Log file is always readable
 - Log file follows the standard Apache combined log format, with quoted request sections and space‑separated fields.
-  `IP - - [date] "METHOD URL HTTP/version" status size`
+  ```
+  IP - - [date] "METHOD URL HTTP/version" status size
+  ```
 - Active IP addresses could either mean the most requests per IP address, or most successful requests. Both were included.
 
 # How To
