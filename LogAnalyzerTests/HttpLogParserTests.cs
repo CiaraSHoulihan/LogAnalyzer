@@ -10,6 +10,16 @@ public class HttpLogParserTests
     }
 
     [Fact]
+    public void Parse_WhitespaceOnly_ReturnsNull()
+    {
+        string line = "    ";
+
+        HttpLogEntry? entry = HttpLogParser.Parse(line);
+
+        Assert.Null(entry);
+    }
+
+    [Fact]
     public void Parse_ExtractsIpUrlAndStatus()
     {
         string line =
