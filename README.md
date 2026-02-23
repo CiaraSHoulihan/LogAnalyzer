@@ -1,10 +1,19 @@
-# Assumptions
-* Log data could be very large so went with ReadLines instead of ReadAllLines to reduce memory usage
-* URLs can point to multiple web servers do did not include IPs in The top 3 most visited URLs
-       - This can then mean the count isn't correct as some websites might have the same paths
-*  Active IP addresses - this could either mean the most requests per IP address, or most successful requests, excluding server errors, per IP address
+# The task
 
-* Data does not change
-* The first space will always be after the IP address
-* There is no data before the IP address
-* The URL lives inside the first quoted HTTP request part
+The task is to parse a log file containing HTTP requests and to report on its contents.
+For a given log file we want to know,
+
+- The number of unique IP addresses
+- The top 3 most visited URLs
+- The top 3 most active IP addresses
+
+## Example Data
+
+177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET /intranet-analytics/ HTTP/1.1" 200 3574
+A log file with test data is included with this assignment.
+
+# Assumptions
+
+- Log file is always readable
+- Log file contains only valid HTTP requests which have an IP address, URL, and status code.
+- Active IP addresses could either mean the most requests per IP address, or most successful requests. Both were included.
