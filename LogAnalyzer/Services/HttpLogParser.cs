@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LogAnalyzer.Models;
+using LogAnalyzer.Interfaces;
 
-namespace LogAnalyzer;
+namespace LogAnalyzer.Services;
 
-public static class HttpLogParser
+public class HttpLogParser : IHttpLogParser
 {
-    public static HttpLogEntry? Parse(string line)
+    public HttpLogEntry? Parse(string line)
     {
         if (string.IsNullOrWhiteSpace(line))
             return null;

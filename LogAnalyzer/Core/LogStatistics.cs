@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LogAnalyzer.Models;
 
-namespace LogAnalyzer;
+namespace LogAnalyzer.Core;
 
 public class LogStatistics
 {

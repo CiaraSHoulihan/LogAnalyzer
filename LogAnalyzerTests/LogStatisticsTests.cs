@@ -1,4 +1,7 @@
-﻿namespace LogAnalyzer.Tests;
+﻿using LogAnalyzer.Core;
+using LogAnalyzer.Models;
+
+namespace LogAnalyzer.Tests;
 
 public class LogStatisticsTests
 {

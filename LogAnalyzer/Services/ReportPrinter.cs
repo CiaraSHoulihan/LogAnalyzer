@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LogAnalyzer.Core;
+using LogAnalyzer.Interfaces;
 
-namespace LogAnalyzer;
+namespace LogAnalyzer.Services;
 
-public static class ReportPrinter
+public class ReportPrinter : IReportPrinter
 {
-    public static void Print(LogStatistics stats)
+    public void Print(LogStatistics stats)
     {
         Console.WriteLine($"\nNumber of unique IP addresses: {stats.UniqueIps.Count}");
 

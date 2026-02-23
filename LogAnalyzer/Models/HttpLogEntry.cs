@@ -1,4 +1,4 @@
-﻿namespace LogAnalyzer;
+﻿namespace LogAnalyzer.Models;
 
 public class HttpLogEntry
 {
