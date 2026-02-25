@@ -40,9 +40,16 @@ public class LogAnalyzerApp
 
             foreach (var line in File.ReadLines(filePath))
             {
-                var entry = _parser.Parse(line);
-                if (entry != null)
-                    stats.Add(entry);
+                try
+                {
+                    var entry = _parser.Parse(line);
+                    if (entry != null)
+                        stats.Add(entry);
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Skipping malformed line: {0}", ex.Message);
+                }
             }
 
             _printer.Print(stats);

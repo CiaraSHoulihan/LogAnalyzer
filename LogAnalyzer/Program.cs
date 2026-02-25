@@ -6,5 +6,12 @@ var services = new ServiceCollection()
     .AddLogAnalyzer()
     .BuildServiceProvider();
 
-var app = services.GetRequiredService<LogAnalyzerApp>();
-app.Run();
+try
+{
+    var app = services.GetRequiredService<LogAnalyzerApp>();
+    app.Run();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Unexpected error: {ex.Message}");
+}
