@@ -11,17 +11,25 @@ while (true)
         break;
     }
 
-    var lines = File.ReadLines(filePath);
-
     var stats = new LogStatistics();
 
-    foreach (var line in lines)
+    try
     {
-        var entry = HttpLogParser.Parse(line);
-        if (entry != null)
+        var lines = File.ReadLines(filePath);
+
+        foreach (var line in lines)
         {
-            stats.Add(entry);
+            var entry = HttpLogParser.Parse(line);
+            if (entry != null)
+            {
+                stats.Add(entry);
+            }
         }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to process file: {ex.Message}\n");
+        continue; // let the user try again
     }
 
     ReportPrinter.Print(stats);

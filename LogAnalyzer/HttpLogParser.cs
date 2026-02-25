@@ -11,7 +11,9 @@ public static class HttpLogParser
     public static HttpLogEntry? Parse(string line)
     {
         if (string.IsNullOrWhiteSpace(line))
+        {
             return null;
+        }
 
         string[] parts = line.Split(' ');
 
